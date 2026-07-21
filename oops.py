@@ -1,4 +1,4 @@
-class Person:
+'''class Person:
     def __init__(self, name, gender, age):
         self.__name = name
         self.__gender = gender
@@ -40,7 +40,7 @@ p1.display_info()
 '''
 from abc import ABC, abstractmethod
 
-class BankAccount(ABC):
+'''class BankAccount(ABC):
     def __init__(self, owner, balance):
         self.owner = owner
         self._balance = balance
@@ -72,5 +72,35 @@ class SavingsAccount(BankAccount):
 account = SavingsAccount("Ravi", 5000)
 account.deposit(1500)
 account.withdraw(2000)
-print(account.get_balance())
-'''
+print(account.get_balance())'''
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        return f"{self.name} is eating."
+
+    def sleep(self):
+        return f"{self.name} is sleeping."
+
+
+class Dog(Animal):
+    def bark(self):
+        return f"{self.name} is barking."
+
+
+class Cat(Animal):
+    def meow(self):
+        return f"{self.name} is meowing."
+
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+print(dog.eat())
+print(dog.bark())
+print(cat.sleep())
+print(cat.meow())
+
